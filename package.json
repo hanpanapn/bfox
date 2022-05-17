@@ -1,6 +1,6 @@
 {
   "name": "bfox",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "对element table组件扩展表头浮动功能",
   "main": "index.js",
   "scripts": {

@@ -82,7 +82,7 @@ const init = (top) => {
                     elTable.style.zIndex = '1000'
                     elTable.style.top = top + 'px'
                     elTable.style.left = '262px'
-                    elTable.style.boxShadow = 'inset -10px 0 10px -10px #00000026'
+                    elTable.style.boxShadow = 'inset 0 8px 10px -10px #00000026'
                     elTable.style.width = dom.getBoundingClientRect().width + 'px'
                     elTable.style.overflow = 'hidden'
                 }
