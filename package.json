@@ -1,0 +1,20 @@
+{
+  "name": "bfox",
+  "version": "1.0.4",
+  "description": "对element table组件扩展表头浮动功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanpanapn/bfox.git"
+  },
+  "keywords": [],
+  "author": "hanpanpan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanpanapn/bfox/issues"
+  },
+  "homepage": "https://github.com/hanpanapn/bfox#readme"
+}
