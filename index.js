@@ -21,6 +21,9 @@ const init = (top) => {
     let tableBodyDomWrap = document.querySelector('.el-table__body-wrapper')
     nextTick(() => {
         let dom = document.querySelector('.el-table')
+        if (!dom) {
+            return
+        }
         dom.append(bottomDiv)
         let MutationObserver =
             window.MutationObserver ||
