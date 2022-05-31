@@ -13,7 +13,7 @@ const ishowBottomDiv = (bottomDiv, scrollBar, tableBodyDomWrap) => {
         scrollBar.style.display = 'none'
     }
 }
-const init = (top) => {
+const init = (top, zIndex) => {
     let bottomDiv = document.createElement('div')
     let bar = document.createElement('div')
     let scrollBar = document.createElement('div')
@@ -41,7 +41,7 @@ const init = (top) => {
         scrollBar.style.width = dom.getBoundingClientRect().width + 'px'
         scrollBar.style.height = '30px'
         scrollBar.style.overflow = 'auto'
-        scrollBar.style.zIndex = '10000'
+        scrollBar.style.zIndex = zIndex
         scrollBar.style.bottom = '0px'
         scrollBar.style.position = 'fixed'
         scrollBar.append(bar)
@@ -82,18 +82,20 @@ const init = (top) => {
                 }
                 if (elTable) {
                     elTable.style.position = 'fixed'
-                    elTable.style.zIndex = '1000'
+                    elTable.style.zIndex = zIndex
                     elTable.style.top = top + 'px'
-                    elTable.style.left = '262px'
+                    elTable.style.right = '56px'
+                    // elTable.style.left = '262px'
                     elTable.style.boxShadow = 'inset 0 8px 10px -10px #00000026'
                     elTable.style.width = dom.getBoundingClientRect().width + 'px'
                     elTable.style.overflow = 'hidden'
                 }
                 if (elTableFixed) {
                     elTableFixed.style.position = 'fixed'
-                    elTableFixed.style.zIndex = '10000'
+                    elTableFixed.style.zIndex = zIndex
                     elTableFixed.style.top = top + 'px'
-                    elTableFixed.style.left = '262px'
+                    elTableFixed.style.right = '56px'
+                    // elTableFixed.style.left = '262px'
                     elTableFixed.style.width = '320px'
                     elTableFixed.style.overflow = 'hidden'
                 }
@@ -102,7 +104,7 @@ const init = (top) => {
                         '.el-table__fixed-right'
                     ).style.width
                     elTableFixedRight.style.position = 'fixed'
-                    elTableFixedRight.style.zIndex = '10000'
+                    elTableFixedRight.style.zIndex = zIndex
                     elTableFixedRight.style.top = top + 'px'
                     elTableFixedRight.style.height = '50px'
                     elTableFixedRight.style.right = '36px'
@@ -130,6 +132,6 @@ const init = (top) => {
     )
 }
 
-export const initScoll = (opt = { top: 100 }) => {
-    init(opt.top)
+export const initScoll = (opt = { top: 100, zIndex: 997 }) => {
+    init(opt.top, opt.zIndex)
 }
